@@ -1,3 +1,57 @@
+@import 'sidebar.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.flex::before,
+        .flex::after {
+            display: none !important;
+        }
+
+@layer components {
+    [type='text']:focus, 
+    [type='password']:focus, 
+    [type='email']:focus, 
+    [type='number']:focus, 
+    [type='tel']:focus, 
+    [type='url']:focus, 
+    [type='search']:focus, 
+    [type='date']:focus, 
+    [type='time']:focus, 
+    [type='datetime-local']:focus, 
+    [type='month']:focus, 
+    [type='week']:focus, 
+    [type='color']:focus, 
+    [type='file']:focus, 
+    [type='range']:focus, 
+    [type='checkbox']:focus, 
+    [type='radio']:focus, 
+    textarea,
+    select{
+        border-color: transparent;
+    }
+    [type='text']:focus, 
+    [type='password']:focus, 
+    [type='email']:focus, 
+    [type='number']:focus, 
+    [type='tel']:focus, 
+    [type='url']:focus, 
+    [type='search']:focus, 
+    [type='date']:focus, 
+    [type='time']:focus, 
+    [type='datetime-local']:focus, 
+    [type='month']:focus, 
+    [type='week']:focus, 
+    [type='color']:focus, 
+    [type='file']:focus, 
+    [type='range']:focus, 
+    [type='checkbox']:focus, 
+    [type='radio']:focus, 
+    select:focus, 
+    textarea:focus {
+        @apply focus:outline-none focus:ring-alerange focus:ring-2;
+    border-color: transparent;
+    --tw-ring-color: transparent;
+    }
+}
