@@ -1,5 +1,6 @@
 import PropType from "prop-types";
 import FeaturedMovie from "./FeaturedMovie";
+import { Link } from "@inertiajs/react";
 
 FeaturedMovie.proTypes = {
     slug: PropType.string.isRequired,
@@ -30,7 +31,10 @@ export default function BrowseMovie({ slug, name, category, thumbnail }) {
             >
                 <img src="/icons/ic_play.svg" className="" width="50" alt="" />
             </div>
-            <a href={slug} className="inset-0 absolute z-50"></a>
+            <Link
+                href={route("prototype.movie.show", slug)}
+                className="inset-0 absolute z-50"
+            ></Link>
         </div>
     );
 }
